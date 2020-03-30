@@ -1,5 +1,6 @@
 # Zigbeebox
-Powerful zigbee coordinator in metal enclosure with USB and debug port.
+
+Powerful zigbee coordinator with USB and debug port in metal enclosure.
 
 ![render1](graphics/render1.jpg)
 ![render2](graphics/render2.jpg)
