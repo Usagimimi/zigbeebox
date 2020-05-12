@@ -5,9 +5,9 @@ Powerful zigbee coordinator with USB and debug port in metal enclosure.
 ### Development in progress!
 
 ## Objectives
-* Use mostly THT and superior SMD components, allow soldering by hand with average tools
-* Design dimensions of PCB to fit in a cheap metal enclosure
-* Avoid dongle-style layout, assist final placement away from any interference
+* Use mostly THT and superior SMD components to allow soldering by hand with average tools
+* PCB dimensions are designed to fit in a cheap metal enclosure
+* Avoid dongle-style layout to assist final placement away from any interference
 
 ## Teaser:
 
