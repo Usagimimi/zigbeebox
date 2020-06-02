@@ -2,7 +2,7 @@
 
 Powerful zigbee coordinator with USB and debug port in metal enclosure.
 
-### Upload in progress!
+### Below is a working prototype based on CC2530. I would like to simplify the whole project by migrating to CC2538. Rebase in progress!
 
 ## Objectives
 * Use mostly THT and superior SMD components to allow soldering by hand with average tools
@@ -15,3 +15,6 @@ Powerful zigbee coordinator with USB and debug port in metal enclosure.
 ![render2](graphics/render2.jpg)
 ![render3](graphics/render3.jpg)
 ![render4](graphics/render4.jpg)
+![box1](graphics/box1.jpg)
+![box2](graphics/box2.jpg)
+![box3](graphics/box3.jpg)
