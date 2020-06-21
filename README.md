@@ -22,7 +22,7 @@ The following components are needed to assemble the coordinator.
 
 | Component  | Type | Package | Value | Quantity |
 | ---------- | ---- | ------- | ----- | -------- |
-| F1 | Polyfuse | SMD-1206 | Ih~250mA It~500mA | 1 |
+| F1 | Polyfuse | SMD-1206 | Ih=250mA It=500mA | 1 |
 | R1-R2 | Resistor | SMD-1206 | 33Ω | 2 |
 | R3 | Resistor | SMD-1206 | 1.5kΩ | 1 | 
 | R4-R6 | Resistor | SMD-1206 | 100Ω | 3 |
@@ -31,7 +31,7 @@ The following components are needed to assemble the coordinator.
 | C1-C2 | Tantalum capacitor | SMD-1206 | 10uF | 2 |
 | C3 | Capacitor | SMD-1206 | 100nF | 1 |
 | C4-C5 | Capacitor | SMD-1206 | 47pF | 2 |
-| PWR-JOIN-ACT | LED | 3mm THT | Vf~2.2V, If~10mA | 3 |
+| PWR-JOIN-ACT | LED | 3mm THT | Vf=2.2V, If=10mA | 3 |
 | LD1117 | Voltage regulator | SOT223 | LD1117S33TR | 1 |
 | USB-C | Receptacle | 16-pin THT | GCT USB4085 | 1 |
 | RESET | Tactile switch | 3-pin THT 4.5x4.5mm | TS-C017 | 1 |
