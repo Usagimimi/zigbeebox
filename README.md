@@ -4,6 +4,8 @@ Powerful zigbee coordinator with USB and debug port in metal enclosure.
 
 ## Description
 
+The coordinator is the central unit of the zigbee network, handling significant RF traffic in most cases. This project offers cheap open-source hardware for this task, as a remix of many DIY coordinators out there. Takes a bit of time and basic soldering skills to assemble, but it can replace any manufacturers proprietary device when ready. Using the right firmware and server backend, you can build a reliable, secure zigbee network without factory restrictions, involving almost any zigbee appliance. If you would like to use IKEA Tradfri lights along with Xiaomi sensors, Philips Hue products in the same network, you can do it. The design heavily relies on open-source software, such as [Zigbee2MQTT](https://www.zigbee2mqtt.io).
+
 ![render1](graphics/render1.jpg)
 ![render2](graphics/render2.jpg)
 ![render3](graphics/render3.jpg)
@@ -11,11 +13,16 @@ Powerful zigbee coordinator with USB and debug port in metal enclosure.
 ![render5](graphics/render5.jpg)
 
 ## Features
+* Zigbee 3.0 capable SoC with external antenna connector and RF amplifier frontend
 * Use mostly THT and superior SMD components to allow soldering by hand with average tools
-* PCB dimensions are designed to fit in a cheap metal enclosure
+* PCB dimensions are designed to fit in a cheap metal enclosure for better shielding
 * Avoid dongle-style layout to assist final placement away from any interference
+* Mounted with convenient USB Type-C receptacle, detach & orientation sensing
+* Plug & play firmware flashing on the J-Link compatible 20pin IDC header
+* Indicator LEDs for power, allow join mode, ZNP activity (RF traffic)
+* Self-regenerating polyfuse protection for USB host & device
 
-## Technical details
+*Since the pcb applies a considerable amount of copper under the CC2538+CC2592 module, it is highly recommended to use the IPEX connector and connect an external antenna, even without metal enclosure.*
 
 ## PCB BOM
 The following components are needed to assemble the coordinator.
@@ -24,7 +31,7 @@ The following components are needed to assemble the coordinator.
 | ---------- | ---- | ------- | ----- | -------- |
 | F1 | Polyfuse | SMD-1206 | Ih=250mA It=500mA | 1 |
 | R1-R2 | Resistor | SMD-1206 | 33Ω | 2 |
-| R3 | Resistor | SMD-1206 | 1.5kΩ | 1 | 
+| R3 | Resistor | SMD-1206 | 1.5kΩ | 1 |
 | R4-R6 | Resistor | SMD-1206 | 100Ω | 3 |
 | R7 | Resistor | SMD-1206 | 1kΩ | 1 |
 | R8-R9 | Resistor | SMD-1206 | 5.1kΩ | 2 |
@@ -35,21 +42,46 @@ The following components are needed to assemble the coordinator.
 | LD1117 | Voltage regulator | SOT223 | LD1117S33TR | 1 |
 | USB-C | Receptacle | 16-pin THT | GCT USB4085 | 1 |
 | RESET | Tactile switch | 3-pin THT 4.5x4.5mm | TS-C017 | 1 |
-| JLINK-JTAG | Connector | 2.54mm IDC double row | 20pin keyed male | 1 |
+| JLINK-JTAG | Connector | 2.54mm IDC double row | 20-pin keyed male | 1 |
 | Pin header | Connector | 2.54mm single row | 4-pin male | 1 |
 
 Additional parts:
 
 | Component  | Type | Package | Quantity |
 | ---------- | ---- | ------- | -------- |
-| *CC2538+CC2592 Module* | *Zigbee RF board* | *33pin 20.5x33mmm* | *1* | 
+| *[CC2538+CC2592 Module](https://github.com/uzsito/CC2538-CC2592-kicad-component)* | *Zigbee RF board* | *33-pin 20.5x33mmm* | *1* |
 
 ## Flashing
+You can upload the following compiled firmware to the board:
+
+| Firmware  | Developer | Tested |
+| --------- | --------- | ------ |
+| [MODKAMRU_V3_USB](https://github.com/reverieline/CC2538-CC2592-ZNP/tree/master/MODKAMRU_V3) | reverieline | Tested |
+| [CC2538-CC2592](https://github.com/antst/CC2538-ZNP-Coordinator-firmware) | antst | Not tested |
+
+Feel free to check [Koenkk's firmware repository](https://github.com/Koenkk/Z-Stack-firmware) for alternatives.
+
+Flashing methods:
+* Using [J-link](https://www.segger.com/products/debug-probes/j-link/) and J-Flash application, connecting to 20-pin header with ribbon cable (Tested)
+* Using [Raspberry Pi and OpenOCD](https://gist.github.com/hwhw/fc43892785aa84913d03495c97b0f25a) connecting with dupont wires (Not tested)
 
 ## Enclosure
 
+It is optional to put the board in a cheap metal case to achieve better shielding and appearance. The finished pcb fits perfectly in the following box by design:
+* 80x50x20mm modular aluminium enclosure (2-3 USD from Aliexpress or Ebay)
+
+![assembled](graphics/assembled.jpg)
+![disassembled](graphics/disassembled.jpg)
+
+*Finished photos and cutout templates coming soon.*
+
+Former prototype:
+
+![old](graphics/old/box3.jpg)
+
 ## Assembly and application
 1. Clone or download this repository.
-2. Use the prebuilt [gerber archive](kicad_board/gerber/zigbeebox.zip) to print the custom pcb. Any chinese manufacturer (JLPCB, ALLPCB, PCBWAY, etc.) can fabricate a copy for a couple dollars. Really, it's dirt cheap.
+2. Use the prebuilt [gerber archive](kicad_board/gerber/zigbeebox.zip) to print the pcb. Any chinese manufacturer (JLPCB, ALLPCB, PCBWAY, etc.) can fabricate a copy for a couple dollars. Really, it's dirt cheap.
 3. Once you got the pcb and the listed components, assemble the coordinator by hand soldering, no special tool needed.
 4. Flash the desired firmware with one of the available methods.
+5. Connect the board to a machine running zigbee2mqtt, and check the log for your new coordinator.
