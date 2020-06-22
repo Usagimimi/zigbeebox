@@ -64,7 +64,7 @@ You can download and burn compiled firmware from the following repositories:
 | [Koenkk/Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware) | | Not tested |
 
 Flashing methods:
-* Using [J-link](https://www.segger.com/products/debug-probes/j-link/) and J-Flash application, connecting to 20-pin header with ribbon cable (Tested)
+* Using [J-link and J-Flash application](https://github.com/uzsito/zigbeebox/wiki/Flashing-with-JLink), connecting to 20-pin header with ribbon cable (Tested)
 * Using [Raspberry Pi and OpenOCD](https://gist.github.com/hwhw/fc43892785aa84913d03495c97b0f25a) connecting with dupont wires (Not tested)
 
 ## Enclosure
@@ -86,4 +86,4 @@ Former prototype:
 2. Use the prebuilt [gerber archive](kicad_board/gerber/zigbeebox.zip) to print the pcb. Any chinese manufacturer (JLPCB, ALLPCB, PCBWAY, etc.) can fabricate a copy for a couple dollars. Really, it's dirt cheap.
 3. Once you got the pcb and the listed components, assemble the coordinator by hand soldering, no special tool needed.
 4. Flash the desired firmware with one of the available methods.
-5. Connect the board to a machine running zigbee2mqtt, and check the log for your new coordinator.
+5. Connect the board to a machine running zigbee2mqtt or other zigbee server application, and check the log for your new coordinator.
