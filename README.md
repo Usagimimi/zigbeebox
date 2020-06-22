@@ -1,10 +1,14 @@
-# Zigbeebox
+# zigbeebox
 
 Powerful zigbee coordinator with USB and debug port in metal enclosure.
 
 ## Description
 
-The coordinator is the central unit of the zigbee network, handling significant RF traffic in most cases. This project offers cheap open-source hardware for this task, as a remix of many DIY coordinators out there. Takes a bit of time and basic soldering skills to assemble, but it can replace any manufacturers proprietary device when ready. Using the right firmware and server backend, you can build a reliable, secure zigbee network without factory restrictions, involving almost any zigbee appliance. If you would like to use IKEA Tradfri lights along with Xiaomi sensors, Philips Hue products in the same network, you can do it. The design heavily relies on open-source software, such as [Zigbee2MQTT](https://www.zigbee2mqtt.io).
+[Zigbee in general.](https://en.wikipedia.org/wiki/Zigbee)
+
+The coordinator is the central unit of the zigbee network, handling significant RF traffic in most cases. This project offers cheap open-source hardware for this task, as a remix of many DIY coordinators out there. Takes a bit of time and basic soldering skills to assemble, but it can replace any manufacturers proprietary device when ready. Using the right firmware and server backend, you can build a reliable, secure zigbee network without factory restrictions, involving almost any zigbee appliance. This opens the possibility to use IKEA Tradfri lights along with Xiaomi sensors, Philips Hue products, and many more in the same network.
+
+The design heavily relies on open-source code, such as [Zigbee2MQTT](https://www.zigbee2mqtt.io) and various firmware.
 
 ![render1](graphics/render1.jpg)
 ![render2](graphics/render2.jpg)
@@ -29,7 +33,7 @@ The following components are needed to assemble the coordinator.
 
 | Component  | Type | Package | Value | Quantity |
 | ---------- | ---- | ------- | ----- | -------- |
-| F1 | Polyfuse | SMD-1206 | Ih=250mA It=500mA | 1 |
+| F1 | Polyfuse | SMD-1206 | Ih=250mA, It=500mA | 1 |
 | R1-R2 | Resistor | SMD-1206 | 33Ω | 2 |
 | R3 | Resistor | SMD-1206 | 1.5kΩ | 1 |
 | R4-R6 | Resistor | SMD-1206 | 100Ω | 3 |
@@ -52,14 +56,13 @@ Additional parts:
 | *[CC2538+CC2592 Module](https://github.com/uzsito/CC2538-CC2592-kicad-component)* | *Zigbee RF board* | *33-pin 20.5x33mmm* | *1* |
 
 ## Flashing
-You can upload the following compiled firmware to the board:
+You can download and burn compiled firmware from the following repositories:
 
-| Firmware  | Developer | Tested |
+| Repository  | Firmware | Tested |
 | --------- | --------- | ------ |
-| [MODKAMRU_V3_USB](https://github.com/reverieline/CC2538-CC2592-ZNP/tree/master/MODKAMRU_V3) | reverieline | Tested |
-| [CC2538-CC2592](https://github.com/antst/CC2538-ZNP-Coordinator-firmware) | antst | Not tested |
-
-Feel free to check [Koenkk's firmware repository](https://github.com/Koenkk/Z-Stack-firmware) for alternatives.
+| [reverieline/CC2538-CC2592-ZNP](https://github.com/reverieline/CC2538-CC2592-ZNP) | MODKAMRU_V3_USB.hex | Tested |
+| [antst/CC2538-ZNP-Coordinator-firmware](https://github.com/antst/CC2538-ZNP-Coordinator-firmware) | | Not tested |
+| [Koenkk/Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware) | | Not tested |
 
 Flashing methods:
 * Using [J-link](https://www.segger.com/products/debug-probes/j-link/) and J-Flash application, connecting to 20-pin header with ribbon cable (Tested)
