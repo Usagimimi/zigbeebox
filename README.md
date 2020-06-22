@@ -72,14 +72,13 @@ Flashing methods:
 It is optional to put the board in a cheap metal case to achieve better shielding and appearance. The finished pcb fits perfectly in the following box by design:
 * 80x50x20mm modular aluminium enclosure (2-3 USD from Aliexpress or Ebay)
 
-![assembled](graphics/assembled.jpg)
-![disassembled](graphics/disassembled.jpg)
+![enclosure](graphics/enclosure.jpg)
 
 *Finished photos and cutout templates coming soon.*
 
 Former prototype:
 
-![old](graphics/old/box3.jpg)
+![old](graphics/old/box.jpg)
 
 ## Assembly and application
 1. Clone or download this repository.
