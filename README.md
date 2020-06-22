@@ -79,6 +79,7 @@ It is optional to put the board in a cheap metal case to achieve better shieldin
 Former prototype:
 
 ![old](graphics/old/box.jpg)
+![pcb](graphics/old/pcb.jpg)
 
 ## Assembly and application
 1. Clone or download this repository.
