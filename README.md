@@ -15,6 +15,8 @@ The design heavily relies on open-source code, such as [Zigbee2MQTT](https://www
 ![render3](graphics/render3.jpg)
 ![render4](graphics/render4.jpg)
 
+![network](graphics/network.jpg)
+
 ## Features
 * Zigbee 3.0 capable SoC with external antenna connector and RF amplifier frontend
 * Use mostly THT and superior SMD components to allow soldering by hand with average tools
