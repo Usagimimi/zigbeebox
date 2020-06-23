@@ -68,12 +68,7 @@ Flashing methods:
 * Using [Raspberry Pi and OpenOCD](https://gist.github.com/hwhw/fc43892785aa84913d03495c97b0f25a) connecting with dupont wires (Not tested)
 
 ## Enclosure
-It is optional to put the board in a cheap metal case to achieve better shielding and appearance. The finished pcb fits perfectly in the following common box by design, with an applied pigtail:
-* 80x50x20mm modular aluminium enclosure (2-3 USD from Aliexpress or Ebay)
-* IPEX U.FL to SMA cable to mount your external antenna
-
-![enclosure](graphics/enclosure.jpg)
-![pigtail](graphics/pigtail.jpg)
+It is optional to [put the board in a cheap metal case](https://github.com/uzsito/zigbeebox/wiki/Installing-in-metal-box) to achieve better shielding and appearance. The finished pcb fits perfectly in a common box by design, with an applied pigtail to connect your external antenna.
 
 *Finished photos and cutout templates coming soon.*
 
