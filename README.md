@@ -1,9 +1,7 @@
 # zigbeebox
-
 Powerful zigbee coordinator with USB and debug port in metal enclosure.
 
 ## Description
-
 [Zigbee in general.](https://en.wikipedia.org/wiki/Zigbee)
 
 The coordinator is the central unit of the zigbee network, handling significant RF traffic in most cases. This project offers low-cost open-source hardware for this task, as a remix of many DIY coordinators out there. Takes a bit of time and basic soldering skills to assemble, but it can replace any manufacturers proprietary device when ready. Using the right firmware and server application, you can build a reliable, secure zigbee network without factory restrictions, involving almost any zigbee appliance. This opens the possibility to use IKEA Tradfri lights along with Xiaomi sensors, Philips Hue products, and many more in the same network. The pcb utilizes a cheap chinese CC2538+CC2592 RF module with ARM Cortex-M3 based SoC, and enough memory to serve a lot of connections with good performance.
@@ -70,11 +68,12 @@ Flashing methods:
 * Using [Raspberry Pi and OpenOCD](https://gist.github.com/hwhw/fc43892785aa84913d03495c97b0f25a) connecting with dupont wires (Not tested)
 
 ## Enclosure
-
-It is optional to put the board in a cheap metal case to achieve better shielding and appearance. The finished pcb fits perfectly in the following box by design:
+It is optional to put the board in a cheap metal case to achieve better shielding and appearance. The finished pcb fits perfectly in the following common box by design, with an applied pigtail:
 * 80x50x20mm modular aluminium enclosure (2-3 USD from Aliexpress or Ebay)
+* IPEX U.FL to SMA cable to mount your external antenna
 
 ![enclosure](graphics/enclosure.jpg)
+![pigtail](graphics/pigtail.jpg)
 
 *Finished photos and cutout templates coming soon.*
 
